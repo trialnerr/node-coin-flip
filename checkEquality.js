@@ -3,4 +3,4 @@ export function checkEquality(userChoice) {
   return userChoice === (zeroOrOne === 0 ? 'heads' : 'tails'); 
 }
 
-// console.log(checkEquality('heads'));
+
