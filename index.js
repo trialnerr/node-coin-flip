@@ -12,8 +12,11 @@ function checkToss(e) {
   fetch(url)
     .then((resp) => resp.json())
     .then((res) => {
-      // document.querySelector('#result').textContent = `${word} ${res.result ? 'is' : 'IS NOT'} a palindrome `; 
-      console.log(res);
+      document.querySelector('#result').textContent = `${
+        res.result
+          ? `YOU WIN!!! The computer also guessed ${userToss}`
+          : `YOU LOSE!!! The computer guessed ${userToss === 'tails' ? 'heads' : 'tails' }`
+      }`; 
     })
     .catch((err) => console.log(err));
 }
